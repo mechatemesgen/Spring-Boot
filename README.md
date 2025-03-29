@@ -1,4 +1,4 @@
-# Spring Boot Weekly Assignment
+# 🌱 Spring Boot Weekly Assignment
 
 This is a Spring Boot project created as part of the Weekly Assignment. The project follows standard Spring Boot conventions and implements essential functionalities as specified in the assignment requirements.
 
