@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sum Result</title>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 2em;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/assignment1">Assignment 1 Page</a>
+        <a href="/api/assignment2">Assignment 2 (API)</a>
+        <a href="/sum">Sum Form</a>
+    </nav>
+
+    <div class="container">
+        <h1>Sum Result</h1>
+        <p th:text="'A: ' + ${a}"></p>
+        <p th:text="'B: ' + ${b}"></p>
+        <p th:text="'C: ' + ${c}"></p>
+        <p th:text="'Sum: ' + ${sum}"></p>
+        <a href="/sumform" class="btn">Try Again</a>
+    </div>
+
+</body>
+</html>

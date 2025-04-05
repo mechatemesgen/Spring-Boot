@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sum Form</title>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/assignment1">Assignment 1 Page</a>
+        <a href="/api/assignment2">Assignment 2 (API)</a>
+        <a href="/sumform">Sum Form</a>
+    </nav>
+
+    <h1>Enter Three Numbers</h1>
+    <form action="/sumresult" method="get">
+        <label for="a">A:</label>
+        <input type="number" name="a" required><br><br>
+
+        <label for="b">B:</label>
+        <input type="number" name="b" required><br><br>
+
+        <label for="c">C:</label>
+        <input type="number" name="c" required><br><br>
+
+        <button type="submit">Calculate Sum</button>
+    </form>
+
+</body>
+</html>
