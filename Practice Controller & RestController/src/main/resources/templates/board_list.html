@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Boards</title>
+</head>
+<body>
+    <h1>Boards</h1>
+    <a th:href="@{/boards/new}">Add New Board</a>
+    <ul>
+        <li th:each="board : ${boards}" th:text="${board.name}"></li>
+    </ul>
+</body>
+</html>

@@ -3,21 +3,69 @@
 <head>
     <title>Home Page</title>
     <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 0;
+        }
         nav {
-            background-color: #333;
-            padding: 1em;
+            background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+            padding: 1.2em 2em;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(78,84,200,0.07);
         }
         nav a {
-            color: white;
-            margin: 0 1em;
+            color: #fff;
+            margin-right: 2em;
             text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        nav a:last-child {
+            margin-right: 0;
         }
         nav a:hover {
+            color: #ffd86b;
             text-decoration: underline;
         }
-        body {
-            font-family: Arial, sans-serif;
-            padding: 1em;
+        .container {
+            max-width: 700px;
+            margin: 2.5em auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(78,84,200,0.08);
+            padding: 2.5em 2em;
+        }
+        h1 {
+            color: #4e54c8;
+            margin-top: 0;
+        }
+        p {
+            color: #444;
+            margin-bottom: 2em;
+        }
+        .assignment-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            margin-top: 1.5em;
+        }
+        .assignment-links a {
+            background: #4e54c8;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(78,84,200,0.07);
+        }
+        .assignment-links a:hover {
+            background: #ffd86b;
+            color: #4e54c8;
         }
     </style>
 </head>
@@ -30,8 +78,19 @@
         <a href="/sumform">Sum</a>
     </nav>
 
-    <h1>Welcome to Spring boot Home Page!</h1>
-    <p>This is the default landing page.</p>
+    <div class="container">
+        <h1>Welcome to Spring Boot Home Page!</h1>
+        <p>This is the default landing page.</p>
 
+        <h1>Week 4 Assignment</h1>
+        <div class="assignment-links">
+            <a th:href="@{/boards}">Board List</a>
+            <a th:href="@{/posts}">Post List</a>
+            <a th:href="@{/boards/new}">Board Form</a>
+            <a th:href="@{/posts/new}">Post Form</a>
+        </div>
+
+
+    </div>
 </body>
 </html>
